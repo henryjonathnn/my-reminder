@@ -1,0 +1,8 @@
+# deps
+node_modules/
+.env
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma
