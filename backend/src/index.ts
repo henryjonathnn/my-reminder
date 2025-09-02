@@ -5,7 +5,7 @@ import taskRouter from './controllers/taskController'
 
 const app = new Hono()
 
-app.use('*', cors())
+app.use('*', cors({ origin: 'http://localhost:5173' }));
 app.onError(errorHandler)
 app.route('/', taskRouter)
 
