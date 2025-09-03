@@ -7,13 +7,15 @@ interface TaskGridProps {
   loading: boolean;
   onEditTask$: QRL<(task: Task) => void>;
   onDeleteTask$: QRL<(id: string) => void>;
+  onToggleComplete$: QRL<(task: Task) => void>;
 }
 
 export const TaskGrid = component$<TaskGridProps>(({ 
   tasks, 
   loading, 
   onEditTask$, 
-  onDeleteTask$ 
+  onDeleteTask$,
+  onToggleComplete$
 }) => {
   if (loading && tasks.length === 0) {
     return (
@@ -45,6 +47,7 @@ export const TaskGrid = component$<TaskGridProps>(({
           index={idx}
           onEdit$={onEditTask$}
           onDelete$={onDeleteTask$}
+          onToggleComplete$={onToggleComplete$}
         />
       ))}
     </div>

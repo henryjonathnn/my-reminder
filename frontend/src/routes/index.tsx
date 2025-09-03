@@ -17,6 +17,7 @@ export default component$(() => {
     createTask,
     updateTask,
     deleteTask,
+    toggleComplete,
     clearError,
   } = useTasks();
 
@@ -69,6 +70,10 @@ export default component$(() => {
     await deleteTask(id);
   });
 
+  const handleToggleComplete = $(async (task: Task) => {
+    await toggleComplete(task);
+  });
+
   return (
     <div class="min-h-screen bg-white flex items-center justify-center p-6">
       <div class="w-full max-w-5xl relative">
@@ -98,6 +103,7 @@ export default component$(() => {
           loading={loading.value}
           onEditTask$={openEditModal}
           onDeleteTask$={handleDeleteTask}
+          onToggleComplete$={handleToggleComplete}
         />
 
         {/* Task Modal */}
@@ -118,7 +124,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: 'description',
-      content: 'A modern sticky note application built with Qwik.js',
+      content: 'A modern todo list application built with Qwik.js',
     },
   ],
 };
