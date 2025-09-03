@@ -42,7 +42,7 @@ A modern, minimalist todo list application built with cutting-edge web technolog
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/my-reminder.git
+   git clone https://github.com/henryjonathnn/my-reminder.git
    cd my-reminder/backend
    ```
 
@@ -292,8 +292,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **[Your Name]**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@henryjonathnn](https://github.com/henryjonathnn)
+- Email: henryjonathanchandra12@gmail.com
 
 ## 🙏 Acknowledgments
 
